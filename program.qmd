@@ -1,0 +1,37 @@
+---
+title: "The Data Science & Analytics Program"
+description: "A fully funded online program in data analytics and data science."
+---
+
+Data Insight runs a fully funded online program for people who want to work with data. There is no tuition and no fee. Places are offered through Data Insight scholarships and fellowships.
+
+## Two tracks
+
+| Track | Length | Certificate |
+|---|---|---|
+| Data analytics | 6 months | Data Analytics Certificate |
+| Data science | 12 months | Data Science Certificate |
+
+Both tracks are online and self-paced. Plan for about 20 hours a week.
+
+## What you learn
+
+Python, the shell, Git and GitHub, importing and cleaning data, Pandas, data manipulation, analysis and visualization, SQL, statistical thinking, supervised and unsupervised learning, neural networks, and deep learning.
+
+## How you learn
+
+You complete eight course projects and two capstone projects, and you publish your work on this site. Publishing is part of the training: it gives you a public portfolio and practice explaining your results. [See what fellows have built](projects.qmd).
+
+## Who it is for
+
+We look for three things:
+
+- A genuine interest in data science.
+- Financial need that has limited your opportunities so far.
+- Evidence of academic resilience.
+
+No coding experience is required.
+
+## Admissions
+
+Admissions are rolling. Each cohort closes once it is full. [How to apply](apply.qmd).

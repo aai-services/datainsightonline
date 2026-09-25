@@ -1,0 +1,6 @@
+---
+title: "Contact"
+description: "Contact Data Insight."
+---
+
+A contact form will be linked here shortly.

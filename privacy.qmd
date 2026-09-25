@@ -1,0 +1,20 @@
+---
+title: "Privacy"
+description: "How this site handles your data."
+---
+
+This page explains what information this site collects and why.
+
+## What this site collects
+
+This site does not have user accounts and does not collect personal information directly.
+
+## Third-party services
+
+- **Advertising.** This site shows ads served by Google AdSense. Google may use cookies to show ads based on your visits to this and other sites. You can manage ad personalization in [Google's ad settings](https://adssettings.google.com). Visitors in regions that require it are asked for consent first.
+- **Fonts.** Fonts are loaded from Google Fonts, which receives your IP address when the page loads.
+- **Forms.** Application and contact forms are hosted by a third-party form service, which stores what you submit.
+
+## Contact
+
+Questions about this policy can be sent through the [contact page](contact.qmd).

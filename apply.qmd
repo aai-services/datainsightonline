@@ -1,0 +1,14 @@
+---
+title: "Apply"
+description: "How to apply for a Data Insight scholarship."
+---
+
+The program is open only to people who receive a Data Insight scholarship or fellowship. There is no fee to apply.
+
+## Before you apply
+
+Read the [program details](program.qmd) and make sure you can commit about 20 hours a week for six or twelve months.
+
+## Application
+
+The application form will be linked here when the next cohort opens.

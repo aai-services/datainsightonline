@@ -1,0 +1,20 @@
+---
+title: "Fellows"
+description: "Data Insight scholarship and fellowship cohorts."
+---
+
+Data Insight fellows come from many countries and backgrounds. Each cohort works through the program together and publishes its projects on this site.
+
+## Cohorts
+
+- [2025 cohort announcement](post/announcing-the-2025-data-insight-fellows-over-200-selected-for-the-data-scientist-analytics-progr/)
+- [September 2022 scholarship awardees](post/towards-becoming-a-data-scientist-september-2022-scholarship-awardees/)
+- January 2022
+- 2021
+- 2020
+
+Full cohort lists will be added here, with each fellow's consent.
+
+## Alumni
+
+Alumni stories will be published here.

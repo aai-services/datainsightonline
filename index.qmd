@@ -1,0 +1,98 @@
+---
+pagetitle: "Data Insight"
+page-layout: full
+title-block-style: none
+listing:
+  id: recent
+  contents: "post/*/index.md"
+  sort: "date desc"
+  type: table
+  max-items: 8
+  fields: [date, title, author]
+  sort-ui: false
+  filter-ui: false
+  date-format: "MMM D, YYYY"
+---
+
+::: {.di-hero}
+# Free data science training, learned by building real projects.
+
+[Data Insight fellows learn Python, statistics, and machine learning online, and publish what they build. Every dot below is one of their projects.]{.lede}
+:::
+
+```{ojs}
+//| echo: false
+data = FileAttachment("data/projects.json").json()
+palette = ["#1B998B", "#7B4B94", "#E0A030", "#4F9FDF", "#C8455A"]
+monthIndex = d => (+d.date.slice(0, 4)) * 12 + (+d.date.slice(5, 7) - 1)
+start = data.posts.length ? monthIndex(data.posts[0]) : 0
+end = data.posts.length ? Math.max(monthIndex(data.posts.at(-1)), monthIndex({date: new Date().toISOString()})) : 0
+// Each month is a column of dots, several dots wide, so busy months stay readable.
+perRow = Math.max(1, Math.floor((width / (end - start + 1)) / 3.4))
+dots = {
+  const counts = new Map();
+  return data.posts.map(d => {
+    const m = monthIndex(d), i = counts.get(m) ?? 0;
+    counts.set(m, i + 1);
+    return {...d, x: m - start + ((i % perRow) + 0.5) / perRow, y: Math.floor(i / perRow)};
+  });
+}
+```
+
+::: {.di-plot}
+```{ojs}
+//| echo: false
+dots.length === 0
+  ? html`<p class="di-plot-note">Projects will appear here once posts are added.</p>`
+  : Plot.plot({
+      width,
+      height: Math.max(220, Math.min(360, (d3.max(dots, d => d.y) + 2) * 3.4 + 40)),
+      marginLeft: 0,
+      marginRight: 0,
+      marginBottom: 28,
+      style: {background: "transparent", color: "currentColor", fontFamily: "inherit", fontSize: "12px"},
+      x: {
+        domain: [0, end - start + 1],
+        label: null,
+        ticks: d3.range(0, end - start + 1).filter(i => (start + i) % 12 === 0),
+        tickFormat: i => String(Math.floor((start + i) / 12))
+      },
+      y: {axis: null, domain: [0, Math.max(40, d3.max(dots, d => d.y) + 2)]},
+      color: {domain: data.groups, range: palette, legend: true, style: {background: "transparent", color: "currentColor", fontFamily: "inherit", fontSize: "13px"}},
+      ariaLabel: "Fellow projects published per month since 2019, one dot per project, colored by topic",
+      marks: [
+        Plot.ruleY([0], {stroke: "currentColor", strokeOpacity: 0.15}),
+        Plot.dot(dots, {
+          x: "x", y: "y", fill: "topic", r: 1.35,
+          title: d => `${d.title}\n${d.author}, ${d.date}`,
+          href: d => `post/${d.slug}/`,
+          tip: true
+        })
+      ]
+    })
+```
+:::
+
+```{ojs}
+//| echo: false
+note = {
+  if (!dots.length) return "";
+  const authors = new Set(dots.map(d => d.author)).size;
+  const first = new Date(dots[0].date).toLocaleString("en-US", {month: "long", year: "numeric"});
+  return `${dots.length.toLocaleString()} projects by ${authors} fellows since ${first}. Select a dot to read the project.`;
+}
+html`<p class="di-plot-note">${note}</p>`
+```
+
+::: {.di-facts}
+Fully funded, with no tuition or fees. Six months for the analytics track or twelve for data science. Online and self-paced, about 20 hours a week.
+:::
+
+[Read about the program](program.qmd){.di-cta} &nbsp; [How to apply](apply.qmd)
+
+## Recent projects
+
+::: {#recent}
+:::
+
+[Browse all projects](projects.qmd)

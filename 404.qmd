@@ -1,0 +1,5 @@
+---
+title: "Page not found"
+---
+
+This page does not exist or has moved. Try the [projects list](projects.qmd) or search above.

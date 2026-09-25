@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: python3 scripts/build_projects_data.py
+  resources:
+    - ads.txt
+    - data/projects.json
+
+website:
+  title: "Data Insight"
+  description: "Free, project-based data science training for learners everywhere."
+  site-url: https://datainsightonline.com
+  favicon: images/favicon.svg
+  search:
+    location: navbar
+    type: overlay
+  open-graph: true
+  navbar:
+    title: "Data Insight"
+    left:
+      - href: program.qmd
+        text: Program
+      - href: projects.qmd
+        text: Projects
+      - href: fellows.qmd
+        text: Fellows
+      - href: resources.qmd
+        text: Resources
+      - href: support.qmd
+        text: Support
+    right:
+      - href: apply.qmd
+        text: Apply
+  page-footer:
+    left: |
+      Data Insight is an initiative of [aai-services](https://github.com/aai-services).
+      Ads and donations cover hosting and program costs.
+    right:
+      - text: About
+        href: about.qmd
+      - text: Impact
+        href: impact.qmd
+      - text: Contact
+        href: contact.qmd
+      - text: Privacy
+        href: privacy.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/light.scss, styles/common.scss]
+      dark: [cosmo, styles/dark.scss, styles/common.scss]
+    respect-user-color-scheme: true
+    highlight-style: github
+    toc: false
+    smooth-scroll: false
+    link-external-newwindow: true
+    include-in-header: _includes/head.html

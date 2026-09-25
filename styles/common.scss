@@ -1,0 +1,66 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$headings-font-weight: 650;
+$font-size-root: 17px;
+$line-height-base: 1.55;
+$border-radius: 4px;
+
+/*-- scss:rules --*/
+:root {
+  --di-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --di-rule: #{$rule};
+  --di-muted: #{$muted};
+  --di-alt: #{$paper-alt};
+}
+
+/* Type scale (ratio ~1.25) */
+h1, .h1 { font-size: 2.44rem; letter-spacing: -0.01em; line-height: 1.15; }
+h2, .h2 { font-size: 1.95rem; line-height: 1.2; margin-top: 2.2rem; }
+h3, .h3 { font-size: 1.25rem; margin-top: 1.6rem; }
+p, li { max-width: 70ch; }
+
+/* Navbar */
+.navbar { border-bottom: 1px solid var(--di-rule); }
+.navbar-title { font-weight: 700; letter-spacing: -0.01em; }
+.navbar a.nav-link[href$="apply.html"] {
+  background: $signal; color: $paper !important; border-radius: $border-radius;
+  padding: .35rem .9rem; margin-left: .5rem; font-weight: 600;
+}
+.navbar a.nav-link[href$="apply.html"]:hover { filter: brightness(1.1); }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid $signal; outline-offset: 2px;
+}
+
+/* Fellow write-ups: serif body for long reading */
+body.di-post main.content > p,
+body.di-post main.content > ul li,
+body.di-post main.content > ol li,
+body.di-post main.content > blockquote {
+  font-family: var(--di-serif); font-size: 1.12rem; line-height: 1.7;
+}
+/* The description is kept for search and link previews, not repeated on the page */
+body.di-post #title-block-header .description { display: none; }
+body.di-post main img { max-width: 100%; height: auto; border-radius: 2px; }
+
+/* Home hero */
+.di-hero h1 { font-size: clamp(2.1rem, 4.5vw, 3.3rem); max-width: 20ch; margin-bottom: 1rem; }
+.di-hero .lede { font-size: 1.2rem; color: var(--di-muted); max-width: 55ch; }
+.di-plot { margin: 1.5rem 0 .5rem; }
+.di-plot svg { overflow: visible; }
+.di-plot-note { color: var(--di-muted); font-size: .95rem; }
+.di-facts { font-size: 1.1rem; border-top: 1px solid var(--di-rule); border-bottom: 1px solid var(--di-rule);
+            padding: .9rem 0; margin: 2rem 0; }
+.di-cta { display: inline-block; background: $signal; color: $paper; padding: .6rem 1.2rem;
+          border-radius: $border-radius; font-weight: 600; text-decoration: none; }
+.di-cta:hover { color: $paper; filter: brightness(1.1); }
+
+/* Listings */
+.quarto-listing-category .category { border-radius: $border-radius; }
+.listing-author, .listing-date { color: var(--di-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

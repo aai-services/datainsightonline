@@ -1,0 +1,12 @@
+---
+title: "About"
+description: "About Data Insight."
+---
+
+Data Insight offers free, project-based data science training to learners who would otherwise have limited access to it. Since 2019, fellows have published more than a thousand projects on this site.
+
+Data Insight is an initiative of [aai-services](https://github.com/aai-services).
+
+## Program director
+
+Adekunle Aina

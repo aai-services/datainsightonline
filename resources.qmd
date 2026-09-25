@@ -1,0 +1,14 @@
+---
+title: "Resources"
+description: "Free learning materials from Data Insight."
+---
+
+## Notebooks
+
+The Data Insight notebooks cover Python basics, Python for data science, and machine learning models such as regression, decision trees, random forests, k-nearest neighbours, k-means, and neural networks. They are being moved to an open repository, free for anyone to use. The link will appear here once it is ready.
+
+## Guides from the blog
+
+- [Python: the language for data science](post/programming-for-data-science/)
+- [Beginner's guide to simple linear regression in Python](post/beginner-s-guide-to-simple-linear-regression-in-python/)
+- [Setting up a Python IDE for data science](post/step-by-step-guide-for-installation-of-python-ide-for-data-science-machine-deep-learning/)

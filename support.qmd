@@ -1,0 +1,14 @@
+---
+title: "Support Data Insight"
+description: "Ways to support free data science training."
+---
+
+Data Insight is free for every fellow. Hosting and program costs are covered by ads on this site and by donations.
+
+## Donate
+
+Donation options are being set up and will be listed here.
+
+## Give your time
+
+Experienced practitioners can help as mentors or project reviewers. [Get in touch](contact.qmd).

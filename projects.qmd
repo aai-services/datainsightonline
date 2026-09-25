@@ -1,0 +1,18 @@
+---
+title: "Projects"
+description: "Projects and write-ups published by Data Insight fellows."
+listing:
+  contents: "post/*/index.md"
+  sort: "date desc"
+  type: table
+  fields: [date, title, author, categories]
+  field-display-names:
+    categories: "Topics"
+  categories: true
+  sort-ui: [date, title, author]
+  filter-ui: true
+  page-size: 50
+  date-format: "MMM YYYY"
+---
+
+Every project here was written by a Data Insight fellow as part of the program. Filter by topic or search by title and author.

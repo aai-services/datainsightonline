@@ -1,0 +1,23 @@
+---
+title: "Impact"
+description: "Data Insight in numbers."
+---
+
+These figures are computed from the projects published on this site and update automatically.
+
+```{ojs}
+//| echo: false
+data = FileAttachment("data/projects.json").json()
+posts = data.posts
+byYear = d3.rollups(posts, v => ({projects: v.length, fellows: new Set(v.map(d => d.author)).size}), d => d.date.slice(0, 4))
+  .map(([year, s]) => ({year, ...s}))
+html`<p><strong>${posts.length.toLocaleString()}</strong> projects by <strong>${new Set(posts.map(d => d.author)).size}</strong> fellows.</p>`
+```
+
+```{ojs}
+//| echo: false
+Inputs.table(byYear, {
+  header: {year: "Year", projects: "Projects published", fellows: "Fellows publishing"},
+  sort: "year", layout: "auto"
+})
+```

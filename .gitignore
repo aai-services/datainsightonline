@@ -1,0 +1,7 @@
+/_site/
+/.quarto/
+/data/projects.json
+__pycache__/
+.DS_Store
+
+**/*.quarto_ipynb
