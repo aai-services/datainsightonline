@@ -64,7 +64,7 @@ dots.length === 0
         Plot.ruleY([0], {stroke: "currentColor", strokeOpacity: 0.15}),
         Plot.dot(dots, {
           x: "x", y: "y", fill: "topic", r: 1.35,
-          title: d => `${d.title}\n${d.author}, ${d.date}`,
+          title: d => `${d.title}\n${d.author}, ${new Date(d.date).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric", timeZone: "UTC"})}`,
           href: d => `post/${d.slug}/`,
           tip: true
         })

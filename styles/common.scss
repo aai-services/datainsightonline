@@ -50,6 +50,12 @@ body.di-post main img { max-width: 100%; height: auto; border-radius: 2px; }
 .di-hero .lede { font-size: 1.2rem; color: var(--di-muted); max-width: 55ch; }
 .di-plot { margin: 1.5rem 0 .5rem; }
 .di-plot svg { overflow: visible; }
+/* Plot's hover tip is drawn with a hard-coded white box, which left light
+   text on white in dark mode. Paint it from the theme instead. */
+.di-plot g[aria-label="tip"] {
+  fill: var(--di-alt);
+  stroke: var(--di-rule);
+}
 .di-plot-note { color: var(--di-muted); font-size: .95rem; }
 .di-facts { font-size: 1.1rem; border-top: 1px solid var(--di-rule); border-bottom: 1px solid var(--di-rule);
             padding: .9rem 0; margin: 2rem 0; }
