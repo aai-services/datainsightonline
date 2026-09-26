@@ -7,6 +7,6 @@ Data Insight offers free, project-based data science training to learners who wo
 
 Data Insight is an initiative of [aai-services](https://github.com/aai-services).
 
-## Program director
+## Program Director
 
 Adekunle Aina
