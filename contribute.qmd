@@ -1,0 +1,51 @@
+---
+title: "Publish a project"
+description: "How Data Insight fellows publish their projects on this site."
+---
+
+Every project on this site was written by a Data Insight fellow. Publishing your work gives you a public portfolio and practice explaining your results to others. This page explains how to submit a project.
+
+## Before you submit
+
+Check that your project:
+
+- Is your own work, written in your own words
+- States the source and license of every dataset, and credits any image you did not make
+- Contains no access keys, passwords, or personal information about anyone
+- Follows the [AI-use policy](https://github.com/aai-services/datainsight-curriculum/blob/main/policies/ai-use.md), including an AI-use log where your stage requires one
+- Keeps each image under 1 MB, and the whole project folder under 10 MB
+
+## Option 1: submit through GitHub (recommended)
+
+This is the same workflow you practise in the program.
+
+1. **Fork** the [site repository](https://github.com/aai-services/datainsightonline) to your own GitHub account.
+2. **Create a folder** for your project under `post/`, named with a short, lowercase, hyphenated version of your title, for example `post/rainfall-trends-in-northern-ghana/`.
+3. **Add your project** to that folder as `index.md` (Markdown) or `index.ipynb` (a Jupyter notebook, with its outputs saved), together with any images it uses.
+4. **Start the file with this header**, filled in with your details:
+
+   ```yaml
+   ---
+   title: "Rainfall trends in northern Ghana"
+   author: "Your Name"
+   date: 2027-03-14
+   description: "One or two sentences on what the project found."
+   categories: ["Statistics", "Visualization"]
+   image: images/main-chart.png
+   ---
+   ```
+
+   In a notebook, put this header in the first cell and make that cell a **Raw** cell.
+
+5. **Open a pull request** to the site repository. An automatic check builds the site with your project and reports any problems.
+6. **Respond to review.** The Program Director, or a peer reviewer, may suggest changes. Once your pull request is merged, your project appears on the site within a few minutes.
+
+Notebooks are published with the outputs you saved; they are not run again. Save the notebook after running every cell from the top.
+
+## Option 2: submit through the form
+
+If you cannot use GitHub yet, submit your project through the project submission form. The link will be shared with each cohort.
+
+## Your rights
+
+You keep the copyright in your work. By submitting, you give Data Insight permission to publish your project on this site with your name, and you confirm that it is your own work and that you have the right to share the data and images it contains. You can ask for your project to be removed at any time through the [contact page](contact.qmd).

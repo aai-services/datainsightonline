@@ -4,7 +4,9 @@ page-layout: full
 title-block-style: none
 listing:
   id: recent
-  contents: "post/*/index.md"
+  contents:
+    - "post/*/index.md"
+    - "post/*/index.ipynb"
   sort: "date desc"
   type: table
   max-items: 8

@@ -2,4 +2,22 @@
 title: "Page not found"
 ---
 
-This page does not exist or has moved. Try the [projects list](projects.qmd) or search above.
+This page does not exist or has moved. Try the [projects list](projects.qmd), or use the search button at the top of the page.
+
+```{=html}
+<script>
+  // Old Wix addresses that were not listed individually: send them to the nearest new page.
+  (function () {
+    var rules = [
+      [/^\/blog(\/|$)/, "/projects.html"],
+      [/^\/product-page\//, "/resources.html"],
+      [/^\/verify-certificate/, "/program.html"],
+      [/^\/aina/, "https://ainaadekunle.substack.com/"]
+    ];
+    var path = window.location.pathname;
+    for (var i = 0; i < rules.length; i++) {
+      if (rules[i][0].test(path)) { window.location.replace(rules[i][1]); return; }
+    }
+  })();
+</script>
+```

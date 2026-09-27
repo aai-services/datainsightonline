@@ -14,10 +14,15 @@ quarto preview
 
 ## Layout
 
-- `post/<slug>/index.md`: fellow projects, one folder per post with its images
+- `post/<slug>/index.md` or `index.ipynb`: fellow projects, one folder per project with its images
 - `*.qmd`: site pages
 - `styles/`: theme
-- `scripts/build_projects_data.py`: builds the data behind the home plot and impact page (runs automatically before each render)
+- `scripts/build_projects_data.py`: builds the data behind the home plot and impact page (runs before each render)
+- `scripts/write_redirects.py` and `redirects.csv`: redirect pages for addresses from the old Wix site (runs after each render)
+- `scripts/check_secrets.py`: fails the build if a project contains an access key
+- `_docs/cutover.md`: checklist for moving datainsightonline.com to this site
+
+Fellows publish projects by pull request; see [Publish a project](https://www.datainsightonline.com/contribute.html).
 
 ## License
 

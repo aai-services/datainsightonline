@@ -33,8 +33,14 @@ def parse_value(raw):
 
 
 def front_matter(path):
-    text = path.read_text(encoding="utf-8")
-    m = re.match(r"---\n(.*?)\n---", text, re.S)
+    """Read the YAML header of a Markdown post, or of a notebook's first (raw) cell."""
+    if path.suffix == ".ipynb":
+        cells = json.loads(path.read_text(encoding="utf-8")).get("cells", [])
+        source = cells[0].get("source", "") if cells else ""
+        text = "".join(source) if isinstance(source, list) else source
+    else:
+        text = path.read_text(encoding="utf-8")
+    m = re.match(r"\s*---\n(.*?)\n---", text, re.S)
     meta = {}
     if m:
         for line in m.group(1).splitlines():
@@ -55,7 +61,7 @@ def group_for(categories):
 def main():
     posts = []
     for md in sorted(ROOT.glob("post/*/index.*")):
-        if md.suffix not in (".md", ".qmd"):
+        if md.suffix not in (".md", ".ipynb"):
             continue
         meta = front_matter(md)
         date = str(meta.get("date", ""))[:10]
